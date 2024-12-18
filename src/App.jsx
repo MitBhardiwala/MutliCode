@@ -1,35 +1,35 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import InputSegment from './components/InputSegment';
-import OutputSegment from './components/OutputSegment';
-import { useState } from 'react';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
-  const [output, setOutput] = useState('');
-
-  const handleRun = async (input) => {
-    try {
-      const response = await fetch('/api/your-endpoint', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ input }),
-      });
-      const data = await response.json();
-      setOutput(data.result); // Adjust based on your API response structure
-    } catch (error) {
-      setOutput('Error occurred while fetching output');
-    }
-  };
+  const [count, setCount] = useState(0)
 
   return (
-    <div className="app">
-      <Navbar />
-      <div className="main-content">
-        <InputSegment onRun={handleRun} />
-        <OutputSegment output={output} />
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
-    </div>
-  );
+      <h1>Vite + React321</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default App;
+export default App
