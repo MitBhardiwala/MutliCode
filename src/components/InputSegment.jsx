@@ -53,7 +53,7 @@ const InputSegment = ({ onRun }) => {
       </div>
 
       <div className="input-container">
-      <button onClick={handleSubmit}>Run</button>
+      <button1 onClick={handleSubmit}>Run</button1>
         <h2>Input</h2>
         <textarea
           value={input}

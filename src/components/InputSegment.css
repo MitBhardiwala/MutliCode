@@ -8,17 +8,17 @@
   border-right: 1px solid #444;
 }
 
-button {
+button1 {
   padding: 10px 20px;
   background-color: #4caf50; /* Green background */
-  color: #2f1e1e;
+  color: #fefefe;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #388e3c; /* Dark green background */
+button1:hover {
+  background-color: #b89033; /* Dark green background */
 }
 
 

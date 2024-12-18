@@ -27,6 +27,7 @@ function App() {
       <div className="main-content">
         <InputSegment onRun={handleRun} />
         <OutputSegment output={output} />
+        
       </div>
     </div>
   );
